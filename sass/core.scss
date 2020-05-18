@@ -16,6 +16,12 @@ body {
 	word-wrap: break-word;
 }
 
+.container {
+	@include min-max(320px, 1140px, 0);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+	background-color: $white;
+}
+
 .wrap {
 	@include min-max(320px, 1140px, 15px);
 }
