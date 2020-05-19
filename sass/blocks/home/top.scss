@@ -1,5 +1,7 @@
 .top {
     background-color: $topGrey;
+    position: relative;
+    z-index: 2;
 
     &__wrap {
         display: flex;
@@ -88,7 +90,7 @@
 
         &__wrap {
             background-color: $topGrey;
-            width: 425px;
+            width: 400px;
             margin: 0;
             margin-left: auto;
             border-bottom-left-radius: 40px;
