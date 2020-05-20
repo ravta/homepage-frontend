@@ -42,6 +42,7 @@
             top: 50%;
             right: 15px;
             transform: translateY(-50%);
+            cursor: pointer;
         }
     }
 
@@ -129,6 +130,8 @@
 
 @media (min-width: 768px) {
     .header {
+        margin-bottom: -30px;
+        
         &__wrap {
             top: -37px;
             height: 150px;
@@ -152,7 +155,7 @@
             display: block;
             position: absolute;
             z-index: 2;
-            top: -40px;
+            top: -45px;
             left: 0;
             width: 160px;
 
@@ -186,7 +189,7 @@
             display: block;
             position: absolute;
             z-index: 2;
-            top: -55px;
+            top: -65px;
             left: 15px;
 
             a {
@@ -250,9 +253,11 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1124px) {
     .header {
         &__phone {
+            left: 30px;
+            
             a {
                 font-size: px-to-rem(22px);
                 line-height: px-to-rem(24px);

@@ -1,0 +1,50 @@
+.main {
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__content {
+        order: 1;
+    }
+
+    &__sidebar {
+        order: 2;
+    }
+
+    &__slider {
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .glide__bullets {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .main {
+        &__slider {
+            .glide__bullets {
+                display: block;
+                left: auto;
+                right: 0;
+            }
+
+            .glide__bullet {
+                height: 12px;
+                width: 12px;
+                border: none;
+                transition: none;
+                background-color: $searchBg;
+
+                &--active {
+                    background-color: $topRed;
+                }
+            }
+        }
+    }
+}
