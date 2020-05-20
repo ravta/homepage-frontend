@@ -20,6 +20,7 @@ body {
 	@include min-max(320px, 1140px, 0);
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 	background-color: $white;
+	margin-bottom: 58px;
 }
 
 .wrap {
@@ -28,4 +29,10 @@ body {
 
 .hidden {
 	@include visually-hidden();
+}
+
+@media (min-width: 768px) {
+	.container {
+		margin-bottom: 0;
+	}
 }
