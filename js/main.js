@@ -1,20 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const btns = document.querySelectorAll('.main__collapse')
-
-    // активируем слайдер
-    if (document.querySelector('#main-slider')) {
-        const mainSlider = new Glide('#main-slider', {
-            type: 'carousel',
-            perView: 1,
-            autoplay: 6000,
-            hoverpause: true,
-            animationDuration: 500,
-            animationTimingFunc: 'ease-in-out',
-        })
-        mainSlider.mount()
-    }
-
-    // скрываемое меню
+    // функции для открытия-скрытия меню
     let slideUp = (target, duration) => {
         target.style.transitionProperty = 'height, margin, padding'
         target.style.transitionDuration = duration + 'ms'
@@ -80,11 +65,29 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    btns.forEach((el) => {
-        el.addEventListener('click', function() {
-            this.classList.toggle('main__collapse--active')
-            const list = this.nextElementSibling
-            slideToggle(list, 200)
+    // активируем слайдер
+    if (document.querySelector('#main-slider')) {
+        const mainSlider = new Glide('#main-slider', {
+            type: 'carousel',
+            perView: 1,
+            autoplay: 6000,
+            hoverpause: true,
+            animationDuration: 500,
+            animationTimingFunc: 'ease-in-out',
         })
-    })
+        mainSlider.mount()
+    }
+
+    // активируем открытие-скрытие меню
+    if (document.querySelectorAll('.main__collapse')) {
+        const btns = document.querySelectorAll('.main__collapse')
+
+        btns.forEach((el) => {
+            el.addEventListener('click', function () {
+                this.classList.toggle('main__collapse--active')
+                const list = this.nextElementSibling
+                slideToggle(list, 500)
+            })
+        })
+    }
 })
