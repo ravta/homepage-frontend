@@ -375,6 +375,15 @@
             transform: translateY(-50%);
         }
     }
+
+    &__widget {
+        display: none;
+    }
+
+    &__banners {
+        display: none;
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -446,6 +455,84 @@
         &__links-desktop {
             display: block;
         }
+
+        &__widget {
+            display: block;
+            background-color: $white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: flex-end;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            li {
+                flex-basis: 20%;
+                margin: 10px;
+            }
+
+            img {
+                width: 50px;
+                height: auto;
+                transition-duration: 500ms;
+                transition-property: opacity;
+                filter: contrast(90%);
+
+                &:hover {
+                    opacity: .75;
+                }
+            }
+
+            .main__icon-payment {
+                width: 80px;
+            }
+
+            .main__icon-battery {
+                width: 55px;
+            }
+
+            .main__icon-tyres {
+                width: 65px;
+            }
+
+            .main__icon-oil {
+                width: 85px;
+            }
+
+            .main__icon-carpet {
+                width: 70px;
+            }
+
+            .main__icon-stuff {
+                width: 75px;
+            }
+        }
+
+        &__banners {
+            margin: 15px 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__banner-small {
+            display: none;
+        }
+
+        &__banner-big {
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+            }
+        }
     }
 }
 
@@ -453,6 +540,45 @@
     .main {
         &__content {
             max-width: 72%;
+        }
+
+        &__widget {
+            li {
+                flex-basis: 10%;
+                margin: 0;
+            }
+        }
+
+        &__banners {
+            margin: 15px 0;
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__banner-small {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-basis: 36%;
+            margin-right: 20px;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+            }
+        }
+
+        &__banner-big {
+            flex-basis: fill;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+            }
         }
     }
 }
