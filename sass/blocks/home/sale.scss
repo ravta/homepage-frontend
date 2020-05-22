@@ -1,0 +1,98 @@
+.sale {
+    background-color: $mainBg;
+
+    &__heading {
+        padding-top: 25px;
+
+        h2 {
+            margin: 0;
+            padding-left: 25px;
+        }
+    }
+
+    &__item {
+        background-color: $white;
+        border-radius: 8px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+        margin: 2px;
+        padding: 25px 15px;
+        max-height: 331px;
+        overflow: hidden;
+    }
+
+    &__img {
+        text-align: center;
+        margin-bottom: 10px;
+
+        a {
+            display: block;
+        }
+
+        img {
+            width: 150px;
+            height: auto;
+        }
+    }
+
+    &__title {
+        text-align: center;
+
+        a {
+            color: $black;
+            font-size: px-to-rem(14px);
+            line-height: px-to-rem(16px);
+            text-decoration: none;
+            display: block;
+        }
+    }
+
+    &__price {
+        p {
+            text-align: center;
+            font-weight: 700;
+        }
+    }
+
+    &__btn {
+        max-width: 150px;
+        margin: 0 auto;
+
+        a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 7px 0;
+            border-radius: 8px;
+            background: linear-gradient(to bottom, lighten($topRed, 20%), lighten($topRed, 10%));
+            color: $white;
+            transition-duration: 500ms;
+            transition-property: opacity;
+            opacity: .75;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .sale {
+        &__heading {
+
+            h2 {
+                padding-left: 50px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .sale {
+        &__wrap {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}

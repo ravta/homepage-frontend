@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // активируем слайдер
+    // активируем главный слайдер
     if (document.querySelector('#main-slider')) {
         const mainSlider = new Glide('#main-slider', {
             type: 'carousel',
@@ -76,6 +76,78 @@ document.addEventListener('DOMContentLoaded', function () {
             animationTimingFunc: 'ease-in-out',
         })
         mainSlider.mount()
+    }
+
+    // активируем слайдер распродаж
+    if (document.querySelector('#sale-slider')) {
+        const saleSlider = new Glide('#sale-slider', {
+            type: 'carousel',
+            perView: 4,
+            autoplay: 7000,
+            hoverpause: true,
+            animationDuration: 500,
+            animationTimingFunc: 'ease-in-out',
+            breakpoints: {
+                1024: {
+                    perView: 3
+                },
+                768: {
+                    perView: 2
+                },
+                576: {
+                    perView: 1
+                }
+            }
+        })
+        saleSlider.mount()
+    }
+
+    // активируем слайдер уцененные товары
+    if (document.querySelector('#discount-slider')) {
+        const discountSlider = new Glide('#discount-slider', {
+            type: 'carousel',
+            perView: 4,
+            autoplay: 9000,
+            hoverpause: true,
+            animationDuration: 500,
+            animationTimingFunc: 'ease-in-out',
+            breakpoints: {
+                1024: {
+                    perView: 3
+                },
+                768: {
+                    perView: 2
+                },
+                576: {
+                    perView: 1
+                }
+            }
+        })
+        discountSlider.mount()
+    }
+
+    // активируем слайдер одного рубля
+    if (document.querySelector('#ruble-slider')) {
+        const rubleSlider = new Glide('#ruble-slider', {
+            type: 'carousel',
+            perView: 4,
+            autoplay: 8000,
+            hoverpause: true,
+            animationDuration: 500,
+            animationTimingFunc: 'ease-in-out',
+            breakpoints: {
+                1024: {
+                    perView: 3
+                },
+                768: {
+                    perView: 2
+                },
+                576: {
+                    perView: 1
+                }
+            }
+        })
+        rubleSlider.mount()
     }
 
     // активируем открытие-скрытие меню
